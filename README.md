@@ -130,3 +130,17 @@ Podemos facilmente combinar filtros usando vírgulas dentro do documento passado
   - sintaxe: `db.collection.deleteMany(filter)`
   - Nota: `db.collection.deleteMany({})` Passando deleteMany desta forma irá excluir **todos** documentos
 - **filter** - São os critérios de filtro, o mesmos do exemplo passado de **Consultar documentos**
+
+## Configuração do MongoDB
+
+Antes de iniciarmos, precisamos ter uma base do **Mongodb** rodando na máquina ou no servidor. Aqui utilizaremos o **docker-compose** do repositório.
+
+```
+docker-compose up -d
+```
+
+Para certificar-se que o ***mongo está rodando***, basta abrir o navegador e digitar **localhost:27017**. Se o navegador devolver a seguinte mensagem:
+
+- **its looks like you are trying to access MongoDB over HTTP on the native driver port.**
+
+Significa que estamos tentando acessar o **mongoDB** pelo navegador, o que não é permitido. Porém, existe ferramentas com interface como **MongoDB Compass Comunity** e **Robo3T**
