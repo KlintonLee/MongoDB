@@ -1,9 +1,9 @@
 # MongoDB
 
-## O que é o MongoDB?
+## 👨🏻‍💻 O que é o MongoDB?
 É um banco de dados open-source orientado a documentos e composto de coleções. Permite alta performance, alta disponibilidade e é fácil de escalar (horizontal).
 
-## O que é documento?
+## 📄 O que é documento?
 Os documentos são formatados como JSON binário, ou seja, constitem de pares de chave: valor.
 ```
 {
@@ -12,7 +12,7 @@ Os documentos são formatados como JSON binário, ou seja, constitem de pares de
 }
 ```
 
-## São schemaless
+## 📝 São schemaless
 Isso significa que dentro da mesma collection, um documento não tem a obrigatoriedade de possuir a mesma estrutura entre eles. Por exemplo:
 ```
 [
@@ -29,9 +29,9 @@ Isso significa que dentro da mesma collection, um documento não tem a obrigator
 ```
 Isso permite a inclusão de novas propriedades sem precisar mudar a estrutura da tabela, se compararmos ao SQL.
 
+![SQL x NoSQL](/assets/sql-nosql.png)
 
-## Seleção 
-### Inserindo documentos
+### 📥 Inserindo documentos
 - insertOne() - Insere apenas um documento, inclusive, se a collection não existir é criada em tempo de execução.
 - sintaxe: `db.my_collection.insertOne(<documento>)`
 ```
@@ -58,7 +58,7 @@ Isso permite a inclusão de novas propriedades sem precisar mudar a estrutura da
 ]
 ```
 
-## Consultando documentos
+## ✉️ Consultando documentos
 - findOne() - Consulta um único documento e, quanto usada sem parâmetros retorna o primeiro documento.
   - sintaxe: `db.collection.findOne(<query>, <projection>)`
 - find() - Consulta multiplos documentos e, quando usada sem parâmetros retorna o cursor todos os documentos da coleção.
@@ -107,7 +107,7 @@ Podemos facilmente combinar filtros usando vírgulas dentro do documento passado
 - `db.customers.find({nome: "Luiz", idade: {$gte: 18}})`
 - `db.customers.find({nome: { $regex: /a/ }, idade: {$gte: 18}})`
 
-## Atualizando Documentos
+## 📨 Atualizando Documentos
 - updateOne() - Consulta um único documento baseado no filtro e atualiza, caso deseje o retorno utilizar **findOneAndUpdate**
   - sintaxe: `db.collection.updateOne(filter, update, options)`
 - updateMany() - Consulta multiplos documentos baseado no filtro e atualiza
@@ -123,7 +123,7 @@ Podemos facilmente combinar filtros usando vírgulas dentro do documento passado
   - `db.Employee.updateOne({"name": "Klinton"}, {$currentDate: {"details.updatedAt": true}})` // Upd campo aninhado
   - `db.Employee.updateOne({"name": "Klinton"}, {$currentDate: {newDate: {$type: "date"}}})` // Add newDate
 
-## Deletando Documentos
+## 📤 Deletando Documentos
 - deleteOne() - Consulta um único documento baseado no filtro e remove da coleção
   - sintaxe: `db.collection.deleteOne(filter)` 
 - deleteMany() - Consulta multiplos documentos baseado no filtro e os remove da coleção
@@ -131,7 +131,7 @@ Podemos facilmente combinar filtros usando vírgulas dentro do documento passado
   - Nota: `db.collection.deleteMany({})` Passando deleteMany desta forma irá excluir **todos** documentos
 - **filter** - São os critérios de filtro, o mesmos do exemplo passado de **Consultar documentos**
 
-## Configuração do MongoDB
+## 🐳 Configuração do MongoDB
 
 Antes de iniciarmos, precisamos ter uma base do **Mongodb** rodando na máquina ou no servidor. Aqui utilizaremos o **docker-compose** do repositório.
 
