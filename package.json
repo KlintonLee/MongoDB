@@ -1,0 +1,23 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "## 👨🏻‍💻 O que é o MongoDB? É um banco de dados open-source orientado a documentos e composto de coleções. Permite alta performance, alta disponibilidade e é fácil de escalar (horizontal).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KlintonLee/MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KlintonLee/MongoDB/issues"
+  },
+  "homepage": "https://github.com/KlintonLee/MongoDB#readme",
+  "dependencies": {
+    "mongodb": "^4.1.3"
+  }
+}

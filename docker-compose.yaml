@@ -12,5 +12,3 @@ services:
     volumes:
       - ./mongo-data:/data/db
       - ./mongo-data/collections:/docker-entrypoint-initdb.d
-    networks:
-      - my-app
